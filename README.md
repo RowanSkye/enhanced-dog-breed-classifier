@@ -31,7 +31,7 @@
 ✅ 기존 대비 patience, factor, min_lr 등 세부 수치 조정<br>
 → 성능 향상 + 과적합 방지 + 불필요한 학습 최소화
 
-### 4) 성능 평가 및 해석 시각화 강화
+### 4) 분류 성능 시각화 및 리포트 
 ✅ classification_report, confusion_matrix 출력<br>
 ✅ 클래스별 정밀도, 재현율, F1-score를 Bar Plot으로 시각화<br>
 → 모델 성능 분석 및 결과 해석 용이
@@ -82,8 +82,8 @@ code_dog_inference_demo.ipynb: → 저장된 모델 불러와서 실시간 예�
 | ├── `annotations/Annotation/`| 이미지 별 bounding box 정보 (XML)                     | 수동 준비                             |
 | `data/`                     | 잘린 + 리사이즈된 전처리 이미지 저장 폴더                  | 자동 생성                             |
 | ├── `[breed folders]/`       | 품종별 전처리 이미지가 저장된 하위 폴더                   | 자동 생성                             |
-| `dense/`                    | 모델 파일 저장 폴더                                 | 수동 생성 (폴더), 파일은 코드에서 저장 |
-| ├── `DenseNet-BC-121-32-no-top.h5` | 사전학습된 DenseNet121 모델                          | 수동 준비 (Kaggle에서 제공)           |
+| `dense/`                    | 모델 파일 저장 폴더                                
+| ├── `DenseNet-BC-121-32-no-top.h5` | 사전학습된 DenseNet121 모델                          | 수동 준비 |
 | ├── `final_dog_breed_model.keras` | 학습된 최종 모델 (.keras)                            | 자동 생성                             |
 | `label_maps_rev.npy`        | 숫자 레이블 → 품종명 매핑 딕셔너리                         | 자동 생성                             |
 | `test_6.jpg`, `test_7.jpg` 등 | 테스트용 강아지 이미지                                | 수동 준비                             |
